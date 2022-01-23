@@ -12,9 +12,9 @@ import (
 
 // Tutor Struct
 type Tutor struct {
-	ID          int    `json:"id"`
-	Name        string `json"name"`
-	Description string `json"description"`
+	ID               int    `json:"id"`
+	TutorName        string `json"name"`
+	TutorDescription string `json"description"`
 }
 
 func home(w http.ResponseWriter, r *http.Request) {
