@@ -4,7 +4,7 @@ use Tutor;
 
 /* Create Table */
 CREATE TABLE Tutors(
-    TutorID          INT NOT NULL, 
+    TutorID          VARCHAR (30) NOT NULL, 
     TutorName        VARCHAR (30) NOT NULL, 
     TutorDescription VARCHAR (250) NOT NULL, 
     PRIMARY KEY (TutorID)
