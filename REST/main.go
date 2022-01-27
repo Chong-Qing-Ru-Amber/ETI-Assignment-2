@@ -12,7 +12,7 @@ import (
 
 // Tutor Struct
 type Tutor struct {
-	ID               string    `json:"id"`
+	ID               string `json:"id"`
 	TutorName        string `json"name"`
 	TutorDescription string `json"description"`
 }
