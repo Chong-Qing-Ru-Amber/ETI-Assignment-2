@@ -1,5 +1,24 @@
 <!DOCTYPE html>
-<head><title>Tutor - Home</title></head>
+<head>
+    <title>Tutor - Home</title>
+    <style>
+        table{
+            border-collapse: collapse;
+            width: 100%;
+            color: #588c7e;
+            font-family: monospace;
+            font-size: 25px;
+            text-align: left;
+        }
+
+        th{
+            background-color: #588c7e;
+            color: white;
+        }
+
+        
+    </style>
+</head>
 <body>
     <header>
         <a href="index.php">
