@@ -1,5 +1,25 @@
 <!DOCTYPE html>
-<head><title>Tutor - Tutor Particular</title></head>
+<head>
+    <title>Tutor - Tutor Particular</title>
+    <style>
+        table{
+            border-collapse: collapse;
+            width: 100%;
+            color: #588c7e;
+            font-family: monospace;
+            font-size: 25px;
+            text-align: left;
+        }
+
+        th{
+            background-color: #588c7e;
+            color: white;
+        }
+
+        
+    </style>
+</head>
+
 <body>
     <header>
         <a href="index.php">
@@ -17,12 +37,16 @@
                 <td><a href="timetable.php">Timetable</a></td>
                 <td><a href="enrolStudent.php">Enrolled students</a></td>
                 <td><a href="rating.php">Ratings and comments</a></td>
-                <?php
-                $conn = mysql_connect("localhost", "root", "", "company");
-                if (Sconn-> connect_error){
-                    die("Connection failed:". $conn-> connect_error);
-                }
+        </table>
+    </nav>
 
+        <table>
+            <tr>
+                <th>Tutor ID</th>
+                <th>Tutor Name</th>
+                <th>Tutor Description</th>
+            <?php
+                include_once("mysql_conn.php");
                 $sql = "SELECT TutorID, TutorName, TutorDescription FROM Tutors";
                 $result = $conn-> query($sql);
 
@@ -37,7 +61,7 @@
                 }
 
                 $conn-> close();
-                ?>
+            ?>
         </table>
-    </nav>
+    
 </body>
