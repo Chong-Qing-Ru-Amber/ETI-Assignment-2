@@ -4,7 +4,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"log"
-	"math/rand"
 	"net/http"
 
 	"github.com/gorilla/mux"
@@ -48,7 +47,6 @@ func createTutor(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	var tutor Tutor
 	_ = json.NewDecoder(r.Body).Decode(&tutor)
-	tutor.ID = rand.Intn(10000000)
 	tutors = append(tutors, tutor)
 	json.NewEncoder(w).Encode(tutor)
 }
